@@ -32,7 +32,7 @@ The only non stdlib dependency is the worderfull `requests` to perform easy HTTP
 To install :
 	pip install request
 
-### Use
+### Doc
 
 The implementation aims to ease of use and simplicity, so everything is quite straightforward.
 
@@ -93,3 +93,14 @@ Here are the possible fileds for each sensor according the mode:
     * mode : "complete"
 * button :
  * date : the datetime when the button was pressed
+
+
+A complete exemple is presented in the `main.py` file
+
+
+## TODO :
+ * add tests, tests, tests
+ * to go faster, compute the first and last page to grab
+ * get the pages with `async` (is request still working?)
+ * Python 3.4 port
+ * easier API for the sensors?
