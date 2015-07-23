@@ -12,7 +12,6 @@ The sensors are :
  * motion
  * a button
 
-
 ## The API
 
 For complete API doc, go to the [sensit.io website](https://api.sensit.io/v1/)
@@ -58,9 +57,9 @@ The functions take 2 arguments out of the 3 possibles:
  * `begin`: when we want the data to start
  * `end`: the we want the data to end
  * `last`: we want N data points after begin or before end
- * for the current date or the device activation shortcut value is `-1`
+ * for the current date (`end`) or the device activation (`begin`), the shortcut value is `-1`
 
-The API to manipulate the data is quite complex because the data change if we are in "complete" (all the sensors values are sent) or "specific" mode. Data fields also change according the sensor kind.
+The API to manipulate the data is quite complex because the data change if we are in "complete" (all the sensors values are sent) or "specific" mode. Data fields also change according the sensor kind. For each classic sensors (temperature, sound, motion) `date` and `value` will always be present, for the button, anly the `date` is present because it is the only interesting field.
 
 Here are the possible fileds for each sensor according the mode:
 * temperature :
